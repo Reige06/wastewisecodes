@@ -65,13 +65,13 @@ ESP32-CAM: Runs FOMO Edge Impulse ML model to identify garbage type.
 
 ESP32 Main: Receives data from the camera, controls the servo motor, and sends bin status to the app.
 
-## **Connect ESP32 Main to Wi-Fi**
+### **Connect ESP32 Main to Wi-Fi**
 
 Only the ESP32 Main connects to Wi-Fi to communicate with the backend.
 
 Enter Wi-Fi credentials in the ESP32 Main code.
 
-## **Test Sensors and Servo Motor**
+### **Test Sensors and Servo Motor**
 
 Confirm that the servo motor moves according to garbage type.
 
@@ -79,7 +79,7 @@ Place trash in the bin and verify that the IR sensors detect it after 5 seconds.
 
 Ensure the mobile app updates bin status (Empty/Full).
 
-## **Deploy Bin**
+### **Deploy Bin**
 
 Place WasteWise in cafeteria.
 
