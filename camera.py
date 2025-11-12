@@ -24,7 +24,7 @@
 // https://github.com/espressif/arduino-esp32/releases/tag/2.0.4
 
 /* Includes ---------------------------------------------------------------- */
-#include <haringmgapirata-project-1_inferencing.h>
+#include <Capstone_2.0_inferencing.h>
 #include "edge-impulse-sdk/dsp/image/image.hpp"
 
 #include "esp_camera.h"
@@ -234,6 +234,7 @@ void loop()
     ei_printf("Anomaly prediction: %.3f\r\n", result.anomaly);
 #endif
 
+
 #if EI_CLASSIFIER_HAS_VISUAL_ANOMALY
     ei_printf("Visual anomalies:\r\n");
     for (uint32_t i = 0; i < result.visual_ad_count; i++) {
@@ -253,6 +254,7 @@ void loop()
 
 
     free(snapshot_buf);
+    ei_sleep(5000);
 
 }
 
