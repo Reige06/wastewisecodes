@@ -3,9 +3,7 @@
 ## **Description**
 
 The WasteWise IoT device is a smart automatic waste-sorting garbage bin designed to make waste management more efficient. The ESP32-CAM identifies the type of garbage using FOMO Edge 
-Impulse machine learning model. The ESP32 Main receives information from the ESP32-CAM, decides how the servo motor should move, and sends the bin status (Empty/Full) to the WasteWise 
-mobile app every 3 seconds. The ESP32 Main connects to Wi-Fi to communicate with the backend, and the system runs on rechargable batteries. The system uses IR proximity sensors to 
-detect if the bin is empty or full and a servo motor to sort waste.
+Impulse machine learning model. The ESP32 Main receives information from the ESP32-CAM, decides how the servo motor should move, and sends the bin status (Not Full/Full) to the WasteWise mobile app every 3 seconds. The ESP32 Main connects to Wi-Fi to communicate with the backend, and the system runs on rechargable batteries. The system uses IR proximity sensors to detect if the bin is Not Full or full and a servo motor to sort waste.
 
 ## **Features**
 
@@ -17,7 +15,7 @@ Battery-Powered: Fully portable, rechargable and independent from mains electric
 
 Periodic Updates: Bin status updates every 3 seconds to the mobile app.
 
-Bin Level Monitoring: IR sensors detect whether the bin is empty or full, updating the mobile app.
+Bin Level Monitoring: IR sensors detect whether the bin is Not Full or full, updating the mobile app.
 
 ## **Hardware Components**
 
@@ -37,9 +35,9 @@ ESP32-CAM identifies the type of garbage using ML.
 
 ESP32 Main receives the garbage type information and decides the servo motor movement.
 
-IR sensors detect trash presence and determine if the bin is empty or full.
+IR sensors detect trash presence and determine if the bin is Not Full or full.
 
-ESP32 Main sends bin status (Empty/Full) to the backend server every 3 seconds.
+ESP32 Main sends bin status (Not Full/Full) to the backend server every 3 seconds.
 
 WasteWise app displays bin status for maintenance staff.
 
@@ -77,7 +75,7 @@ Confirm that the servo motor moves according to garbage type.
 
 Place trash in the bin and verify that the IR sensors detect it after 5 seconds.
 
-Ensure the mobile app updates bin status (Empty/Full).
+Ensure the mobile app updates bin status (Not Full/Full).
 
 ### **Deploy Bin**
 
@@ -89,11 +87,12 @@ Identify garbage type
 
 Sort waste via servo motor
 
-Detect trash presence (full/empty)
+Detect trash presence (full/Not Full)
 
 Update the app every 3 seconds
 
 When full, the bin prevents additional trash from being added.
+
 
 ## **Integration with App**
 
